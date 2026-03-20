@@ -1,0 +1,54 @@
+=== POMIARY WYDAJNOŚCI ===
+
+1. Program OpenMP - całka (calka_omp)
+---------------------------
+Liczba wątków: 1
+
+Program obliczania całki metodą trapezów.
+
+Początek obliczeń OpenMP
+	Czas wykonania 0.093436. 	Obliczona całka = 0.250000000000012
+
+Liczba wątków: 2
+
+Program obliczania całki metodą trapezów.
+
+Początek obliczeń OpenMP
+	Czas wykonania 0.048209. 	Obliczona całka = 0.249999999999989
+
+Liczba wątków: 4
+
+Program obliczania całki metodą trapezów.
+
+Początek obliczeń OpenMP
+	Czas wykonania 0.027048. 	Obliczona całka = 0.249999999999991
+
+
+2. Program MPI - mnożenie macierz-wektor (mat_vec_row_MPI_modified)
+-----------------------------------------------------------------
+Liczba procesów: 1
+poczatek (wykonanie sekwencyjne)
+	czas wykonania (zaburzony przez MPI?): 0.034190, Gflop/s: 5.943613, GB/s> 23.776811
+
+Liczba procesów: 2
+poczatek (wykonanie sekwencyjne)
+	czas wykonania (zaburzony przez MPI?): 0.031186, Gflop/s: 6.516119, GB/s> 26.067060
+Starting MPI matrix-vector product with block row decomposition!
+Wersja rownolegla MPI z dekompozycją wierszową blokową
+	czas wykonania: 0.048641, Gflop/s: 4.177816, GB/s> 16.712920
+
+Liczba procesów: 4
+poczatek (wykonanie sekwencyjne)
+	czas wykonania (zaburzony przez MPI?): 0.068883, Gflop/s: 2.950119, GB/s> 11.801646
+Starting MPI matrix-vector product with block row decomposition!
+Wersja rownolegla MPI z dekompozycją wierszową blokową
+	czas wykonania: 0.022256, Gflop/s: 9.130811, GB/s> 36.526867
+
+
+3. Program MPI - obliczanie π (MPI_pi)
+-------------------------------------
+Przykład uruchomienia (4 procesy):
+Podaj 10000000 jako liczbę wyrazów
+Podaj maksymalną liczbę wyrazów do obliczenia przybliżenia PI
+PI obliczone: 			   3.141592658503068
+PI z biblioteki matematycznej: 	   3.141592653589793
